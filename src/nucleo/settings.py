@@ -111,6 +111,13 @@ SPECTACULAR_SETTINGS = {
     ),
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
+    # Nombres claros en Swagger para los choices que se llaman igual en distintos modelos
+    "ENUM_NAME_OVERRIDES": {
+        "TipoProductoEnum": "catalogo.models.Producto.TIPOS",
+        "TipoEventoEnum": "eventos.models.Evento.TIPOS",
+        "EstadoPedidoEnum": "ventas.models.Pedido.ESTADOS",
+        "EstadoEventoEnum": "eventos.models.Evento.ESTADOS",
+    },
 }
 
 SIMPLE_JWT = {
