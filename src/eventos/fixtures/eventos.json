@@ -1,0 +1,482 @@
+[
+  {
+    "model": "eventos.evento",
+    "pk": 1,
+    "fields": {
+      "nombre": "Copa Arcana de Primavera: Catan",
+      "descripcion": "Torneo eliminatorio de Catan base, partidas a 10 puntos.",
+      "tipo": "TORNEO",
+      "juego": 1,
+      "organizador": 1,
+      "fecha": "2026-09-19 18:00:00-03:00",
+      "cupo": 8,
+      "costo_inscripcion": "5000",
+      "estado": "FINALIZADO"
+    }
+  },
+  {
+    "model": "eventos.evento",
+    "pk": 2,
+    "fields": {
+      "nombre": "Torneo de Carcassonne",
+      "descripcion": "Tres rondas suizas y final a cuatro jugadores.",
+      "tipo": "TORNEO",
+      "juego": 2,
+      "organizador": 1,
+      "fecha": "2026-10-03 17:00:00-03:00",
+      "cupo": 8,
+      "costo_inscripcion": "4000",
+      "estado": "FINALIZADO"
+    }
+  },
+  {
+    "model": "eventos.evento",
+    "pk": 3,
+    "fields": {
+      "nombre": "Liga de Terraforming Mars",
+      "descripcion": "Una tarde entera para terraformar Marte con corporaciones del juego base.",
+      "tipo": "TORNEO",
+      "juego": 3,
+      "organizador": 1,
+      "fecha": "2026-10-17 15:00:00-03:00",
+      "cupo": 5,
+      "costo_inscripcion": "6000",
+      "estado": "FINALIZADO"
+    }
+  },
+  {
+    "model": "eventos.evento",
+    "pk": 4,
+    "fields": {
+      "nombre": "Campaña: La Mina Perdida de Phandelver",
+      "descripcion": "Campaña semanal de D&D 5e para personajes de nivel 1. Jueves 20 h.",
+      "tipo": "CAMPANA_ROL",
+      "juego": 12,
+      "organizador": 1,
+      "fecha": "2026-10-08 20:00:00-03:00",
+      "cupo": 5,
+      "costo_inscripcion": "0",
+      "estado": "EN_CURSO"
+    }
+  },
+  {
+    "model": "eventos.evento",
+    "pk": 5,
+    "fields": {
+      "nombre": "Noche de juegos: party y risas",
+      "descripcion": "Dixit, Código Secreto y más. Traé amigos, nosotros ponemos los juegos.",
+      "tipo": "NOCHE_JUEGOS",
+      "juego": 6,
+      "organizador": 1,
+      "fecha": "2026-11-06 20:00:00-03:00",
+      "cupo": 20,
+      "costo_inscripcion": "0",
+      "estado": "PROGRAMADO"
+    }
+  },
+  {
+    "model": "eventos.evento",
+    "pk": 6,
+    "fields": {
+      "nombre": "Torneo de Wingspan",
+      "descripcion": "Mesa final única a cuatro jugadores. ¡Quedan pocos lugares!",
+      "tipo": "TORNEO",
+      "juego": 4,
+      "organizador": 1,
+      "fecha": "2026-11-21 16:00:00-03:00",
+      "cupo": 4,
+      "costo_inscripcion": "5000",
+      "estado": "PROGRAMADO"
+    }
+  },
+  {
+    "model": "eventos.evento",
+    "pk": 7,
+    "fields": {
+      "nombre": "One-shot de terror: La Llamada de Cthulhu",
+      "descripcion": "Partida autoconclusiva de investigación. Personajes pregenerados.",
+      "tipo": "PARTIDA_ROL",
+      "juego": 13,
+      "organizador": 1,
+      "fecha": "2026-11-13 21:00:00-03:00",
+      "cupo": 5,
+      "costo_inscripcion": "3000",
+      "estado": "PROGRAMADO"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 1,
+    "fields": {
+      "evento": 1,
+      "usuario": 2,
+      "personaje": "",
+      "fecha": "2026-09-10 12:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 2,
+    "fields": {
+      "evento": 1,
+      "usuario": 3,
+      "personaje": "",
+      "fecha": "2026-09-10 15:30:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 3,
+    "fields": {
+      "evento": 1,
+      "usuario": 4,
+      "personaje": "",
+      "fecha": "2026-09-12 10:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 4,
+    "fields": {
+      "evento": 1,
+      "usuario": 5,
+      "personaje": "",
+      "fecha": "2026-09-14 19:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 5,
+    "fields": {
+      "evento": 2,
+      "usuario": 2,
+      "personaje": "",
+      "fecha": "2026-09-25 18:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 6,
+    "fields": {
+      "evento": 2,
+      "usuario": 3,
+      "personaje": "",
+      "fecha": "2026-09-26 11:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 7,
+    "fields": {
+      "evento": 2,
+      "usuario": 4,
+      "personaje": "",
+      "fecha": "2026-09-28 20:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 8,
+    "fields": {
+      "evento": 3,
+      "usuario": 3,
+      "personaje": "",
+      "fecha": "2026-10-06 09:30:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 9,
+    "fields": {
+      "evento": 3,
+      "usuario": 2,
+      "personaje": "",
+      "fecha": "2026-10-07 14:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 10,
+    "fields": {
+      "evento": 3,
+      "usuario": 5,
+      "personaje": "",
+      "fecha": "2026-10-09 17:45:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 11,
+    "fields": {
+      "evento": 4,
+      "usuario": 5,
+      "personaje": "Elandor, bardo semielfo",
+      "fecha": "2026-10-01 21:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 12,
+    "fields": {
+      "evento": 4,
+      "usuario": 4,
+      "personaje": "Brunna, enana clériga",
+      "fecha": "2026-10-01 21:30:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 13,
+    "fields": {
+      "evento": 4,
+      "usuario": 3,
+      "personaje": "Kael, pícaro humano",
+      "fecha": "2026-10-02 10:15:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 14,
+    "fields": {
+      "evento": 4,
+      "usuario": 2,
+      "personaje": "Lyra, maga elfa",
+      "fecha": "2026-10-02 18:40:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 15,
+    "fields": {
+      "evento": 5,
+      "usuario": 4,
+      "personaje": "",
+      "fecha": "2026-10-20 13:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 16,
+    "fields": {
+      "evento": 5,
+      "usuario": 5,
+      "personaje": "",
+      "fecha": "2026-10-21 22:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 17,
+    "fields": {
+      "evento": 6,
+      "usuario": 4,
+      "personaje": "",
+      "fecha": "2026-10-22 10:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 18,
+    "fields": {
+      "evento": 6,
+      "usuario": 2,
+      "personaje": "",
+      "fecha": "2026-10-22 16:30:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 19,
+    "fields": {
+      "evento": 6,
+      "usuario": 3,
+      "personaje": "",
+      "fecha": "2026-10-23 09:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 20,
+    "fields": {
+      "evento": 7,
+      "usuario": 5,
+      "personaje": "Profesor Armitage, bibliotecario",
+      "fecha": "2026-10-24 20:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.inscripcion",
+    "pk": 21,
+    "fields": {
+      "evento": 7,
+      "usuario": 3,
+      "personaje": "Detective Rosa Quiroga",
+      "fecha": "2026-10-25 11:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.resultado",
+    "pk": 1,
+    "fields": {
+      "evento": 1,
+      "usuario": 2,
+      "posicion": 1,
+      "puntos": 10
+    }
+  },
+  {
+    "model": "eventos.resultado",
+    "pk": 2,
+    "fields": {
+      "evento": 1,
+      "usuario": 3,
+      "posicion": 2,
+      "puntos": 7
+    }
+  },
+  {
+    "model": "eventos.resultado",
+    "pk": 3,
+    "fields": {
+      "evento": 1,
+      "usuario": 5,
+      "posicion": 3,
+      "puntos": 5
+    }
+  },
+  {
+    "model": "eventos.resultado",
+    "pk": 4,
+    "fields": {
+      "evento": 1,
+      "usuario": 4,
+      "posicion": 4,
+      "puntos": 3
+    }
+  },
+  {
+    "model": "eventos.resultado",
+    "pk": 5,
+    "fields": {
+      "evento": 2,
+      "usuario": 4,
+      "posicion": 1,
+      "puntos": 10
+    }
+  },
+  {
+    "model": "eventos.resultado",
+    "pk": 6,
+    "fields": {
+      "evento": 2,
+      "usuario": 2,
+      "posicion": 2,
+      "puntos": 7
+    }
+  },
+  {
+    "model": "eventos.resultado",
+    "pk": 7,
+    "fields": {
+      "evento": 2,
+      "usuario": 3,
+      "posicion": 3,
+      "puntos": 5
+    }
+  },
+  {
+    "model": "eventos.resultado",
+    "pk": 8,
+    "fields": {
+      "evento": 3,
+      "usuario": 2,
+      "posicion": 1,
+      "puntos": 10
+    }
+  },
+  {
+    "model": "eventos.resultado",
+    "pk": 9,
+    "fields": {
+      "evento": 3,
+      "usuario": 3,
+      "posicion": 2,
+      "puntos": 7
+    }
+  },
+  {
+    "model": "eventos.resultado",
+    "pk": 10,
+    "fields": {
+      "evento": 3,
+      "usuario": 5,
+      "posicion": 3,
+      "puntos": 5
+    }
+  },
+  {
+    "model": "eventos.leyenda",
+    "pk": 1,
+    "fields": {
+      "evento": 1,
+      "autor": 3,
+      "protagonista": 2,
+      "titulo": "El puerto que nadie vio venir",
+      "relato": "Íbamos todos mirando a Nico, que tenía el camino más largo. Lu no había comerciado en toda la partida: sola, con su puerto 2:1 de trigo, convirtió cada cosecha en lo que le faltaba y en el último turno construyó dos ciudades de golpe. Diez puntos y la copa.",
+      "destacada": true,
+      "fecha": "2026-09-20 10:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.leyenda",
+    "pk": 2,
+    "fields": {
+      "evento": 2,
+      "autor": 2,
+      "protagonista": 4,
+      "titulo": "La catedral imposible",
+      "relato": "En la última ronda quedaban tres losetas y una ciudad de catorce piezas abierta, con catedral. Todos sabían que era imposible cerrarla. Sofi sacó justo la pieza que faltaba y la mesa entera se levantó a aplaudir.",
+      "destacada": false,
+      "fecha": "2026-10-04 11:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.leyenda",
+    "pk": 3,
+    "fields": {
+      "evento": 3,
+      "autor": 5,
+      "protagonista": 3,
+      "titulo": "Oxígeno al límite",
+      "relato": "Mateo estuvo cuatro generaciones sin poner una sola carta verde. Cuando todos pensábamos que se había quedado atrás, subió el oxígeno al máximo y cerró la partida. No alcanzó para ganar, pero nadie se olvida de esa jugada.",
+      "destacada": false,
+      "fecha": "2026-10-18 09:00:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.leyenda",
+    "pk": 4,
+    "fields": {
+      "evento": 4,
+      "autor": 4,
+      "protagonista": 5,
+      "titulo": "El bardo y el dragón verde",
+      "relato": "En Thundertree nos cruzamos con Venomfang y el grupo entero estaba a un golpe de caer. Elandor se adelantó, guardó el laúd y le propuso un trato al dragón: le contaríamos dónde estaba el tesoro de la mina a cambio de dejarnos ir. Un 19 natural en Persuasión. Seguimos vivos y el dragón todavía nos espera.",
+      "destacada": true,
+      "fecha": "2026-10-23 23:50:00-03:00"
+    }
+  },
+  {
+    "model": "eventos.leyenda",
+    "pk": 5,
+    "fields": {
+      "evento": 4,
+      "autor": 5,
+      "protagonista": 3,
+      "titulo": "Un pícaro, un cofre y una trampa",
+      "relato": "Kael juró que el cofre del escondite de los Capas Rojas no tenía trampa. Tenía. Pasó la sesión entera envuelto en vendas, pero adentro estaba el mapa a la Mina de Phandelver.",
+      "destacada": false,
+      "fecha": "2026-10-16 23:15:00-03:00"
+    }
+  }
+]

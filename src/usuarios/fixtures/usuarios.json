@@ -1,0 +1,102 @@
+[
+  {
+    "model": "usuarios.usuario",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1500000$DaEaNACp7hUVcwNXNl5Zvk$Xf2gYvEm9ETWqWgyafkGtoHW/A/tkLE0F039K6UfwLY=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "arcana_admin",
+      "first_name": "Admin",
+      "last_name": "Arcana",
+      "email": "arcana_admin@arcana.example",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-09-01 10:00:00-03:00",
+      "alias": "Arcana",
+      "fecha_nacimiento": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "usuarios.usuario",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$1500000$DaEaNACp7hUVcwNXNl5Zvk$Xf2gYvEm9ETWqWgyafkGtoHW/A/tkLE0F039K6UfwLY=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "lucia",
+      "first_name": "Lucía",
+      "last_name": "Fernández",
+      "email": "lucia@arcana.example",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-09-02 10:00:00-03:00",
+      "alias": "Lu la Estratega",
+      "fecha_nacimiento": "1998-04-12",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "usuarios.usuario",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$1500000$DaEaNACp7hUVcwNXNl5Zvk$Xf2gYvEm9ETWqWgyafkGtoHW/A/tkLE0F039K6UfwLY=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "mateo",
+      "first_name": "Mateo",
+      "last_name": "Gómez",
+      "email": "mateo@arcana.example",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-09-03 10:00:00-03:00",
+      "alias": "Mateo Dados",
+      "fecha_nacimiento": "2001-09-30",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "usuarios.usuario",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$1500000$DaEaNACp7hUVcwNXNl5Zvk$Xf2gYvEm9ETWqWgyafkGtoHW/A/tkLE0F039K6UfwLY=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "sofia",
+      "first_name": "Sofía",
+      "last_name": "Martínez",
+      "email": "sofia@arcana.example",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-09-04 10:00:00-03:00",
+      "alias": "Sofi Runas",
+      "fecha_nacimiento": "1999-01-22",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "usuarios.usuario",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$1500000$DaEaNACp7hUVcwNXNl5Zvk$Xf2gYvEm9ETWqWgyafkGtoHW/A/tkLE0F039K6UfwLY=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "nicolas",
+      "first_name": "Nicolás",
+      "last_name": "Pereyra",
+      "email": "nicolas@arcana.example",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-09-05 10:00:00-03:00",
+      "alias": "Nico el Bardo",
+      "fecha_nacimiento": "2000-07-05",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

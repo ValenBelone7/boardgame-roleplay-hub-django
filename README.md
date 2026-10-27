@@ -15,6 +15,7 @@ Este repositorio contiene la **API REST** de Arcana, construida con Django y Dja
 - [Planificación de la base de datos](#planificación-de-la-base-de-datos)
 - [Instalación con uv](#instalación-con-uv)
 - [Instalación con Docker](#instalación-con-docker)
+- [Datos de ejemplo](#datos-de-ejemplo)
 - [Variables de entorno](#variables-de-entorno)
 - [Rutas principales](#rutas-principales)
 
@@ -218,7 +219,8 @@ uv sync
 # Base de datos y superusuario
 cd src
 uv run manage.py migrate
-uv run manage.py createsuperuser
+uv run manage.py loaddata usuarios catalogo ventas eventos   # datos de ejemplo (opcional)
+uv run manage.py createsuperuser                              # o usar arcana_admin
 
 # Servidor de desarrollo
 uv run manage.py runserver
@@ -238,10 +240,44 @@ docker compose up --build
 Las migraciones se aplican solas al iniciar el contenedor. En otra terminal:
 
 ```bash
-docker compose exec web uv run --no-sync manage.py createsuperuser
+docker compose exec web uv run --no-sync manage.py loaddata usuarios catalogo ventas eventos
+docker compose exec web uv run --no-sync manage.py createsuperuser   # opcional
 ```
 
 La base SQLite se guarda en el volumen `arcana-data`, así que los datos se conservan entre `docker compose down` y `docker compose up`. Para empezar de cero: `docker compose down -v`.
+
+## Datos de ejemplo
+
+El repositorio incluye fixtures con datos de Arcana para probar la API sin cargar nada a mano:
+
+| Fixture | Contenido |
+|---|---|
+| `usuarios` | 1 administrador y 4 jugadores con alias |
+| `catalogo` | 6 categorías, 6 editoriales, 13 diseñadores, 10 mecánicas, 21 productos (juegos de mesa, de rol, 3 expansiones y accesorios, uno dado de baja) y 13 reseñas |
+| `ventas` | 4 pedidos: confirmados, cancelado y uno pendiente (carrito) |
+| `eventos` | 7 eventos (3 finalizados con podio, 1 campaña de rol en curso y 3 programados), 21 inscripciones, 10 resultados y 5 leyendas |
+
+```bash
+cd src
+uv run manage.py loaddata usuarios catalogo ventas eventos
+```
+
+Los fixtures usan ids fijos: se cargan sobre una base recién migrada. Para volver a empezar,
+borrar `src/db.sqlite3` (o `docker compose down -v`) y repetir `migrate` + `loaddata`.
+
+### Usuarios de demo
+
+Todos tienen la contraseña **`arcana2026`**.
+
+| Usuario | Alias | Rol |
+|---|---|---|
+| `arcana_admin` | Arcana | Staff y superusuario: admin y escritura del catálogo y los eventos |
+| `lucia` | Lu la Estratega | Jugadora: 2 títulos, tiene un pedido pendiente |
+| `mateo` | Mateo Dados | Jugador |
+| `sofia` | Sofi Runas | Jugadora |
+| `nicolas` | Nico el Bardo | Jugador |
+
+Las portadas de los productos (`imagen_url`) apuntan a imágenes de Wikipedia y Wikimedia Commons.
 
 ## Variables de entorno
 
