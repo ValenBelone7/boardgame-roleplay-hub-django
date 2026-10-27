@@ -48,6 +48,9 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "corsheaders",
     "usuarios",
+    "catalogo",
+    "ventas",
+    "eventos",
 ]
 
 MIDDLEWARE = [
