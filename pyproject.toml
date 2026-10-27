@@ -1,0 +1,32 @@
+[project]
+name = "arcana-api"
+version = "0.1.0"
+description = "API REST de Arcana, tienda de juegos de mesa y rol con eventos, tabla de ganadores y leyendas"
+readme = "README.md"
+authors = [
+    { name = "Valen Belone", email = "valenbelone14@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "django>=6.1.2",
+    "django-cors-headers>=4.9.0",
+    "django-filter>=26.2",
+    "djangorestframework>=3.18.3",
+    "djangorestframework-simplejwt>=5.5.1",
+    "drf-spectacular>=0.30.0",
+    "python-dotenv>=1.2.4",
+]
+
+[tool.ruff]
+line-length = 100
+src = ["src"]
+extend-exclude = ["**/migrations/*"]
+
+[tool.ruff.lint]
+# Los atributos de clase de Django (fields, list_display, permission_classes...) son listas
+ignore = ["RUF012"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.3",
+]
