@@ -48,6 +48,10 @@ class EventoViewSet(viewsets.ModelViewSet):
             return EventoPublicSerializer
         return EventoSerializer
 
+    def perform_create(self, serializer):
+        # El organizador es el staff logueado, no viene en el body
+        serializer.save(organizador=self.request.user)
+
     @extend_schema(
         summary="Inscribirse a un evento",
         description="Anota al usuario logueado. El personaje es opcional (partidas de rol).",

@@ -63,12 +63,14 @@ class EventoTests(APITestCase):
             {
                 "nombre": "Noche de juegos",
                 "tipo": "NOCHE_JUEGOS",
-                "organizador": self.staff.id,
+                "organizador": self.lucia.id,
                 "fecha": (timezone.now() + timedelta(days=3)).isoformat(),
                 "cupo": 20,
             },
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        # El organizador es el staff logueado aunque el body diga otra cosa
+        self.assertEqual(response.data["organizador"], self.staff.id)
 
     def test_inscribirse_sin_auth(self):
         response = self.inscribirse()
@@ -182,10 +184,11 @@ class ResultadoTests(APITestCase):
             strict=True,
         ):
             for posicion, (usuario, puntos) in enumerate(podio, start=1):
+                Inscripcion.objects.create(evento=evento, usuario=usuario)
                 Resultado.objects.create(
                     evento=evento, usuario=usuario, posicion=posicion, puntos=puntos
                 )
-        self.evento = eventos[0]
+        self.evento = eventos[0]  # podio: lucia 1°, mateo 2°
 
     def test_salon_de_la_fama(self):
         response = self.client.get("/api/resultados/salon_de_la_fama/")
@@ -202,12 +205,38 @@ class ResultadoTests(APITestCase):
         )
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
 
+    def test_cargar_resultado_inscripto(self):
+        Inscripcion.objects.create(evento=self.evento, usuario=self.sofia)
+        self.client.login(username="admin", password="clave-segura-123")
+        response = self.client.post(
+            "/api/resultados/",
+            {"evento": self.evento.id, "usuario": self.sofia.id, "posicion": 3, "puntos": 5},
+        )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+    def test_cargar_resultado_no_inscripto(self):
+        self.client.login(username="admin", password="clave-segura-123")
+        response = self.client.post(
+            "/api/resultados/",
+            {"evento": self.evento.id, "usuario": self.sofia.id, "posicion": 3},
+        )
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertIn("usuario", response.data)
+
     def test_cargar_puesto_repetido(self):
+        Inscripcion.objects.create(evento=self.evento, usuario=self.sofia)
         self.client.login(username="admin", password="clave-segura-123")
         response = self.client.post(
             "/api/resultados/",
             {"evento": self.evento.id, "usuario": self.sofia.id, "posicion": 1},
         )
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertNotIn("usuario", response.data)
+
+    def test_cambiar_resultado_a_no_inscripto(self):
+        resultado = Resultado.objects.get(evento=self.evento, posicion=2)
+        self.client.login(username="admin", password="clave-segura-123")
+        response = self.client.patch(f"/api/resultados/{resultado.id}/", {"usuario": self.sofia.id})
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
 
@@ -258,6 +287,17 @@ class LeyendaTests(APITestCase):
         self.assertEqual(response.data["autor"], self.nico.id)
         # Solo el staff destaca leyendas (desde el admin)
         self.assertFalse(response.data["destacada"])
+
+    def test_create_leyenda_de_evento_programado(self):
+        self.evento.estado = "PROGRAMADO"
+        self.evento.save()
+        self.client.login(username="nicolas", password="clave-segura-123")
+        response = self.client.post(
+            self.url,
+            {"evento": self.evento.id, "titulo": "Spoiler", "relato": "Todavía no pasó."},
+        )
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertIn("evento", response.data)
 
     def test_editar_leyenda_ajena(self):
         self.client.login(username="nicolas", password="clave-segura-123")
