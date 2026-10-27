@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+
+# Entorno virtual (uv)
+.venv/
+
+# Django
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+*.log
+
+# Variables de entorno
+.env
+
+# Editores / SO
+.vscode/
+.idea/
+.DS_Store
+
+# Contexto y planes (se comparten por fuera de GitHub)
+CLAUDE.md
+CONTEXTO.md
+contexto/
+planes/
+PLAN*.md
+.claude/
