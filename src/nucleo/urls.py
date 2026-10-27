@@ -8,8 +8,10 @@ from drf_spectacular.views import (
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 from .routers import router
+from .views import inicio
 
 urlpatterns = [
+    path("", inicio, name="inicio"),
     path("admin/", admin.site.urls),
     path("api/", include(router.urls)),
     path("api/token/", TokenObtainPairView.as_view(), name="token_obtain"),

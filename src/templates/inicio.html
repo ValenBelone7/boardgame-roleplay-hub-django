@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcana — API</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎲</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+</head>
+<body>
+    <header class="hero">
+        <p class="hero__sello">⬡ Tienda de juegos de mesa y rol ⬡</p>
+        <h1 class="hero__titulo">Arcana</h1>
+        <p class="hero__lema">Donde cada tirada se convierte en leyenda.</p>
+        <p class="hero__texto">
+            Vendemos juegos de mesa, manuales de rol y accesorios, y abrimos nuestras mesas a la
+            comunidad con torneos, partidas de rol y noches de juegos. Cada evento deja su tabla
+            de ganadores y las leyendas de lo que pasó en la mesa.
+        </p>
+    </header>
+
+    <main class="contenido">
+        <section class="contadores">
+            <article class="contador">
+                <span class="contador__numero">{{ cantidad_productos }}</span>
+                <span class="contador__texto">juegos y accesorios</span>
+            </article>
+            <article class="contador">
+                <span class="contador__numero">{{ cantidad_eventos }}</span>
+                <span class="contador__texto">evento{{ cantidad_eventos|pluralize }} próximo{{ cantidad_eventos|pluralize }}</span>
+            </article>
+            <article class="contador">
+                <span class="contador__numero">{{ cantidad_leyendas }}</span>
+                <span class="contador__texto">leyenda{{ cantidad_leyendas|pluralize }} escrita{{ cantidad_leyendas|pluralize }}</span>
+            </article>
+        </section>
+
+        <section>
+            <h2 class="seccion__titulo">Explorá la API</h2>
+            <div class="enlaces">
+                <a class="enlace" href="/api/">
+                    <strong>API navegable</strong>
+                    <span>Recorré los endpoints desde el navegador</span>
+                </a>
+                <a class="enlace" href="{% url 'swagger-ui' %}">
+                    <strong>Swagger</strong>
+                    <span>Documentación interactiva OpenAPI</span>
+                </a>
+                <a class="enlace" href="{% url 'redoc' %}">
+                    <strong>Redoc</strong>
+                    <span>Referencia completa de la API</span>
+                </a>
+                <a class="enlace" href="/admin/">
+                    <strong>Administración</strong>
+                    <span>Panel de control de la tienda</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="columnas">
+            <div>
+                <h2 class="seccion__titulo">Próximos eventos</h2>
+                {% if proximos_eventos %}
+                    <ul class="eventos">
+                        {% for evento in proximos_eventos %}
+                            <li class="evento">
+                                <span class="evento__fecha">{{ evento.fecha|date:"d/m H:i" }}</span>
+                                <span class="evento__nombre">{{ evento.nombre }}</span>
+                                <span class="evento__detalle">
+                                    {{ evento.get_tipo_display }}{% if evento.juego %} · {{ evento.juego.nombre }}{% endif %}
+                                </span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="vacio">Todavía no hay eventos programados.</p>
+                {% endif %}
+            </div>
+
+            <div>
+                <h2 class="seccion__titulo">Leyenda destacada</h2>
+                {% if leyenda_destacada %}
+                    <blockquote class="leyenda">
+                        <p class="leyenda__titulo">{{ leyenda_destacada.titulo }}</p>
+                        <p class="leyenda__relato">{{ leyenda_destacada.relato|truncatewords:40 }}</p>
+                        <footer class="leyenda__pie">
+                            {{ leyenda_destacada.evento.nombre }}{% if leyenda_destacada.protagonista %} · protagonizada por {{ leyenda_destacada.protagonista }}{% endif %}
+                        </footer>
+                    </blockquote>
+                {% else %}
+                    <p class="vacio">Las leyendas se escriben en la mesa. Todavía no hay ninguna destacada.</p>
+                {% endif %}
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        Arcana · EFI 2026 · Ingeniería de Software — ITEC
+    </footer>
+</body>
+</html>
