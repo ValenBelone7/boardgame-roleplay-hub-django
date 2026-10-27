@@ -94,3 +94,13 @@ class LeyendaPublicSerializer(serializers.ModelSerializer):
     class Meta:
         model = Leyenda
         fields = ["id", "evento", "autor", "protagonista", "titulo", "relato", "destacada", "fecha"]
+
+
+class SalonDeLaFamaSerializer(UsuarioResumenSerializer):
+    # titulos, podios y puntos vienen del annotate de la action salon_de_la_fama
+    titulos = serializers.IntegerField(read_only=True)
+    podios = serializers.IntegerField(read_only=True)
+    puntos = serializers.IntegerField(read_only=True)
+
+    class Meta(UsuarioResumenSerializer.Meta):
+        fields = [*UsuarioResumenSerializer.Meta.fields, "titulos", "podios", "puntos"]
