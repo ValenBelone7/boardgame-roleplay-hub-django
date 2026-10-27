@@ -10,6 +10,8 @@ class EventoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Evento
         fields = "__all__"
+        # El organizador es el staff que crea el evento (perform_create)
+        read_only_fields = ["organizador"]
 
 
 class EventoResumenSerializer(serializers.ModelSerializer):
@@ -68,6 +70,14 @@ class ResultadoSerializer(serializers.ModelSerializer):
         model = Resultado
         fields = "__all__"
 
+    def validate(self, attrs):
+        # Solo sube al podio quien estaba inscripto en el evento
+        evento = attrs.get("evento", getattr(self.instance, "evento", None))
+        usuario = attrs.get("usuario", getattr(self.instance, "usuario", None))
+        if not evento.inscripciones.filter(usuario=usuario).exists():
+            raise serializers.ValidationError({"usuario": "No está inscripto en este evento."})
+        return attrs
+
 
 class ResultadoPublicSerializer(serializers.ModelSerializer):
     evento = EventoResumenSerializer(read_only=True)
@@ -84,6 +94,12 @@ class LeyendaSerializer(serializers.ModelSerializer):
         fields = ["id", "evento", "autor", "protagonista", "titulo", "relato", "destacada", "fecha"]
         # destacada la marca el staff desde el admin
         read_only_fields = ["id", "autor", "destacada", "fecha"]
+
+    def validate_evento(self, value):
+        # Una leyenda cuenta algo que ya pasó en la mesa
+        if value.estado in ["PROGRAMADO", "CANCELADO"]:
+            raise serializers.ValidationError("El evento todavía no se jugó o fue cancelado.")
+        return value
 
 
 class LeyendaPublicSerializer(serializers.ModelSerializer):
