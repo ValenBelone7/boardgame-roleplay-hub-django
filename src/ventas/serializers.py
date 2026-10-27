@@ -27,8 +27,9 @@ class ItemPedidoPublicSerializer(serializers.ModelSerializer):
         model = ItemPedido
         fields = ["id", "producto", "cantidad", "precio_unitario", "subtotal"]
 
-    def get_subtotal(self, obj):
-        return obj.cantidad * obj.precio_unitario
+    def get_subtotal(self, obj) -> str:
+        # Como texto, igual que precio_unitario y total ("80000.00")
+        return str(obj.cantidad * obj.precio_unitario)
 
 
 class PedidoSerializer(serializers.ModelSerializer):
