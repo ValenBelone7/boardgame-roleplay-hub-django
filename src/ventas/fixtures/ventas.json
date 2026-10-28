@@ -1,0 +1,116 @@
+[
+  {
+    "model": "ventas.pedido",
+    "pk": 1,
+    "fields": {
+      "usuario": 3,
+      "estado": "CONFIRMADO",
+      "total": "109700",
+      "fecha": "2026-10-10 18:20:00-03:00",
+      "fecha_confirmacion": "2026-10-10 18:25:00-03:00"
+    }
+  },
+  {
+    "model": "ventas.itempedido",
+    "pk": 1,
+    "fields": {
+      "pedido": 1,
+      "producto": 1,
+      "cantidad": 1,
+      "precio_unitario": "89900"
+    }
+  },
+  {
+    "model": "ventas.itempedido",
+    "pk": 2,
+    "fields": {
+      "pedido": 1,
+      "producto": 18,
+      "cantidad": 2,
+      "precio_unitario": "9900"
+    }
+  },
+  {
+    "model": "ventas.pedido",
+    "pk": 2,
+    "fields": {
+      "usuario": 4,
+      "estado": "CANCELADO",
+      "total": "119900",
+      "fecha": "2026-10-12 11:00:00-03:00",
+      "fecha_confirmacion": "2026-10-12 11:02:00-03:00"
+    }
+  },
+  {
+    "model": "ventas.itempedido",
+    "pk": 3,
+    "fields": {
+      "pedido": 2,
+      "producto": 4,
+      "cantidad": 1,
+      "precio_unitario": "119900"
+    }
+  },
+  {
+    "model": "ventas.pedido",
+    "pk": 3,
+    "fields": {
+      "usuario": 5,
+      "estado": "CONFIRMADO",
+      "total": "154800",
+      "fecha": "2026-10-16 20:40:00-03:00",
+      "fecha_confirmacion": "2026-10-16 20:45:00-03:00"
+    }
+  },
+  {
+    "model": "ventas.itempedido",
+    "pk": 4,
+    "fields": {
+      "pedido": 3,
+      "producto": 12,
+      "cantidad": 1,
+      "precio_unitario": "109900"
+    }
+  },
+  {
+    "model": "ventas.itempedido",
+    "pk": 5,
+    "fields": {
+      "pedido": 3,
+      "producto": 20,
+      "cantidad": 1,
+      "precio_unitario": "44900"
+    }
+  },
+  {
+    "model": "ventas.pedido",
+    "pk": 4,
+    "fields": {
+      "usuario": 2,
+      "estado": "PENDIENTE",
+      "total": "0",
+      "fecha": "2026-10-26 22:10:00-03:00",
+      "fecha_confirmacion": null
+    }
+  },
+  {
+    "model": "ventas.itempedido",
+    "pk": 6,
+    "fields": {
+      "pedido": 4,
+      "producto": 3,
+      "cantidad": 1,
+      "precio_unitario": "129900"
+    }
+  },
+  {
+    "model": "ventas.itempedido",
+    "pk": 7,
+    "fields": {
+      "pedido": 4,
+      "producto": 19,
+      "cantidad": 2,
+      "precio_unitario": "7900"
+    }
+  }
+]

@@ -1,0 +1,15 @@
+services:
+  web:
+    build: .
+    container_name: arcana-api
+    ports:
+      - "8000:8000"
+    env_file: .env
+    environment:
+      # La base SQLite vive en un volumen para no perder los datos al recrear el contenedor
+      SQLITE_PATH: /app/data/db.sqlite3
+    volumes:
+      - arcana-data:/app/data
+
+volumes:
+  arcana-data:

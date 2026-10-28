@@ -1,0 +1,194 @@
+:root {
+    --fondo: #14111c;
+    --superficie: #1f1a2b;
+    --borde: #3a3150;
+    --texto: #ece6f5;
+    --texto-suave: #a99fbd;
+    --dorado: #d9a441;
+    --violeta: #8b5cf6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(circle at top, #2a2140 0%, var(--fondo) 60%);
+    color: var(--texto);
+    font-family: "Inter", system-ui, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.hero {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 72px 16px 40px;
+    text-align: center;
+}
+
+.hero__sello {
+    color: var(--dorado);
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.hero__titulo {
+    font-family: "Cinzel", serif;
+    font-size: clamp(3rem, 12vw, 5.5rem);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    background: linear-gradient(180deg, #f6d68a, var(--dorado));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero__lema {
+    font-family: "Cinzel", serif;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+}
+
+.hero__texto {
+    color: var(--texto-suave);
+}
+
+.contenido {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 16px 48px;
+    display: grid;
+    gap: 40px;
+}
+
+.contadores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.contador {
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.contador__numero {
+    display: block;
+    font-family: "Cinzel", serif;
+    font-size: 2.4rem;
+    color: var(--dorado);
+}
+
+.contador__texto {
+    color: var(--texto-suave);
+}
+
+.seccion__titulo {
+    font-family: "Cinzel", serif;
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    color: var(--dorado);
+}
+
+.enlaces {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.enlace {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 18px;
+    color: var(--texto);
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.enlace:hover {
+    border-color: var(--violeta);
+    transform: translateY(-2px);
+}
+
+.enlace span {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+.columnas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.eventos {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+.evento {
+    display: grid;
+    background: var(--superficie);
+    border-left: 3px solid var(--violeta);
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
+.evento__fecha {
+    color: var(--dorado);
+    font-size: 0.85rem;
+}
+
+.evento__nombre {
+    font-weight: 600;
+}
+
+.evento__detalle,
+.vacio {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+.leyenda {
+    background: var(--superficie);
+    border-left: 3px solid var(--dorado);
+    border-radius: 8px;
+    padding: 16px 20px;
+}
+
+.leyenda__titulo {
+    font-family: "Cinzel", serif;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.leyenda__relato {
+    color: var(--texto-suave);
+    font-style: italic;
+}
+
+.leyenda__pie {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: var(--dorado);
+}
+
+.pie {
+    text-align: center;
+    padding: 24px 16px;
+    color: var(--texto-suave);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--borde);
+}

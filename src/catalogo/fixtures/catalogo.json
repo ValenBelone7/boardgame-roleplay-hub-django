@@ -1,0 +1,992 @@
+[
+  {
+    "model": "catalogo.categoria",
+    "pk": 1,
+    "fields": {
+      "nombre": "Estrategia",
+      "descripcion": "Juegos de planificación a largo plazo y gestión de recursos."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 2,
+    "fields": {
+      "nombre": "Familiar",
+      "descripcion": "Reglas simples y partidas cortas para jugar con cualquiera."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 3,
+    "fields": {
+      "nombre": "Party",
+      "descripcion": "Para grupos grandes: risas, palabras e imaginación."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 4,
+    "fields": {
+      "nombre": "Cooperativo",
+      "descripcion": "Todos contra el juego: se gana o se pierde en equipo."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 5,
+    "fields": {
+      "nombre": "Rol",
+      "descripcion": "Manuales y sistemas para contar historias en grupo."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 6,
+    "fields": {
+      "nombre": "Accesorios",
+      "descripcion": "Dados, fundas, pantallas y todo lo que acompaña a la mesa."
+    }
+  },
+  {
+    "model": "catalogo.editorial",
+    "pk": 1,
+    "fields": {
+      "nombre": "Devir",
+      "pais": "España",
+      "sitio_web": "https://www.devir.com"
+    }
+  },
+  {
+    "model": "catalogo.editorial",
+    "pk": 2,
+    "fields": {
+      "nombre": "Maldito Games",
+      "pais": "Argentina",
+      "sitio_web": "https://malditogames.com"
+    }
+  },
+  {
+    "model": "catalogo.editorial",
+    "pk": 3,
+    "fields": {
+      "nombre": "Bureau de Juegos",
+      "pais": "Argentina",
+      "sitio_web": "https://www.bureaudejuegos.com"
+    }
+  },
+  {
+    "model": "catalogo.editorial",
+    "pk": 4,
+    "fields": {
+      "nombre": "Wizards of the Coast",
+      "pais": "Estados Unidos",
+      "sitio_web": "https://company.wizards.com"
+    }
+  },
+  {
+    "model": "catalogo.editorial",
+    "pk": 5,
+    "fields": {
+      "nombre": "Asmodee",
+      "pais": "Francia",
+      "sitio_web": "https://www.asmodee.com"
+    }
+  },
+  {
+    "model": "catalogo.editorial",
+    "pk": 6,
+    "fields": {
+      "nombre": "Ruibal",
+      "pais": "Argentina",
+      "sitio_web": ""
+    }
+  },
+  {
+    "model": "catalogo.disenador",
+    "pk": 1,
+    "fields": {
+      "nombre": "Klaus Teuber",
+      "nacionalidad": "Alemania"
+    }
+  },
+  {
+    "model": "catalogo.disenador",
+    "pk": 2,
+    "fields": {
+      "nombre": "Klaus-Jürgen Wrede",
+      "nacionalidad": "Alemania"
+    }
+  },
+  {
+    "model": "catalogo.disenador",
+    "pk": 3,
+    "fields": {
+      "nombre": "Jacob Fryxelius",
+      "nacionalidad": "Suecia"
+    }
+  },
+  {
+    "model": "catalogo.disenador",
+    "pk": 4,
+    "fields": {
+      "nombre": "Elizabeth Hargrave",
+      "nacionalidad": "Estados Unidos"
+    }
+  },
+  {
+    "model": "catalogo.disenador",
+    "pk": 5,
+    "fields": {
+      "nombre": "Michael Kiesling",
+      "nacionalidad": "Alemania"
+    }
+  },
+  {
+    "model": "catalogo.disenador",
+    "pk": 6,
+    "fields": {
+      "nombre": "Jean-Louis Roubira",
+      "nacionalidad": "Francia"
+    }
+  },
+  {
+    "model": "catalogo.disenador",
+    "pk": 7,
+    "fields": {
+      "nombre": "Matt Leacock",
+      "nacionalidad": "Estados Unidos"
+    }
+  },
+  {
+    "model": "catalogo.disenador",
+    "pk": 8,
+    "fields": {
+      "nombre": "Alan R. Moon",
+      "nacionalidad": "Reino Unido"
+    }
+  },
+  {
+    "model": "catalogo.disenador",
+    "pk": 9,
+    "fields": {
+      "nombre": "Antoine Bauza",
+      "nacionalidad": "Francia"
+    }
+  },
+  {
+    "model": "catalogo.disenador",
+    "pk": 10,
+    "fields": {
+      "nombre": "Vlaada Chvátil",
+      "nacionalidad": "República Checa"
+    }
+  },
+  {
+    "model": "catalogo.disenador",
+    "pk": 11,
+    "fields": {
+      "nombre": "Jeremy Crawford",
+      "nacionalidad": "Estados Unidos"
+    }
+  },
+  {
+    "model": "catalogo.disenador",
+    "pk": 12,
+    "fields": {
+      "nombre": "Sandy Petersen",
+      "nacionalidad": "Estados Unidos"
+    }
+  },
+  {
+    "model": "catalogo.disenador",
+    "pk": 13,
+    "fields": {
+      "nombre": "Jason Bulmahn",
+      "nacionalidad": "Estados Unidos"
+    }
+  },
+  {
+    "model": "catalogo.mecanica",
+    "pk": 1,
+    "fields": {
+      "nombre": "Colocación de losetas",
+      "descripcion": "Se arma el tablero pieza a pieza durante la partida."
+    }
+  },
+  {
+    "model": "catalogo.mecanica",
+    "pk": 2,
+    "fields": {
+      "nombre": "Comercio y negociación",
+      "descripcion": "Los jugadores intercambian recursos entre sí."
+    }
+  },
+  {
+    "model": "catalogo.mecanica",
+    "pk": 3,
+    "fields": {
+      "nombre": "Construcción de motor",
+      "descripcion": "Cada carta potencia a las siguientes: el combo crece."
+    }
+  },
+  {
+    "model": "catalogo.mecanica",
+    "pk": 4,
+    "fields": {
+      "nombre": "Draft de cartas",
+      "descripcion": "Se elige una carta y se pasa el resto al jugador de al lado."
+    }
+  },
+  {
+    "model": "catalogo.mecanica",
+    "pk": 5,
+    "fields": {
+      "nombre": "Tirada de dados",
+      "descripcion": "El azar de los dados decide producciones o acciones."
+    }
+  },
+  {
+    "model": "catalogo.mecanica",
+    "pk": 6,
+    "fields": {
+      "nombre": "Cooperativo",
+      "descripcion": "Todos juntos contra el juego."
+    }
+  },
+  {
+    "model": "catalogo.mecanica",
+    "pk": 7,
+    "fields": {
+      "nombre": "Narrativa",
+      "descripcion": "La historia que se cuenta en la mesa es parte del juego."
+    }
+  },
+  {
+    "model": "catalogo.mecanica",
+    "pk": 8,
+    "fields": {
+      "nombre": "Colección de sets",
+      "descripcion": "Se suman puntos juntando combinaciones de elementos."
+    }
+  },
+  {
+    "model": "catalogo.mecanica",
+    "pk": 9,
+    "fields": {
+      "nombre": "Deducción",
+      "descripcion": "Adivinar a partir de pistas incompletas."
+    }
+  },
+  {
+    "model": "catalogo.mecanica",
+    "pk": 10,
+    "fields": {
+      "nombre": "Construcción de rutas",
+      "descripcion": "Conectar puntos del mapa con caminos propios."
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 1,
+    "fields": {
+      "nombre": "Catan",
+      "descripcion": "Colonizá la isla de Catan: construí pueblos, ciudades y caminos comerciando recursos.",
+      "tipo": "JUEGO_MESA",
+      "precio": "89900",
+      "stock": 8,
+      "jugadores_min": 3,
+      "jugadores_max": 4,
+      "duracion_minutos": 90,
+      "edad_minima": 10,
+      "imagen_url": "https://upload.wikimedia.org/wikipedia/en/a/a3/Catan-2015-boxart.jpg",
+      "activo": true,
+      "fecha_alta": "2026-09-02 09:00:00-03:00",
+      "categoria": 1,
+      "editorial": 1,
+      "mecanicas": [
+        2,
+        5
+      ],
+      "disenadores": [
+        1
+      ],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 2,
+    "fields": {
+      "nombre": "Carcassonne",
+      "descripcion": "Armá el paisaje medieval loseta a loseta y ubicá a tus seguidores en ciudades y caminos.",
+      "tipo": "JUEGO_MESA",
+      "precio": "59900",
+      "stock": 10,
+      "jugadores_min": 2,
+      "jugadores_max": 5,
+      "duracion_minutos": 45,
+      "edad_minima": 7,
+      "imagen_url": "https://upload.wikimedia.org/wikipedia/en/5/5e/Carcassonne-game.jpg",
+      "activo": true,
+      "fecha_alta": "2026-09-03 09:00:00-03:00",
+      "categoria": 2,
+      "editorial": 1,
+      "mecanicas": [
+        1
+      ],
+      "disenadores": [
+        2
+      ],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 3,
+    "fields": {
+      "nombre": "Terraforming Mars",
+      "descripcion": "Corporaciones compiten por volver habitable a Marte: temperatura, oxígeno y océanos.",
+      "tipo": "JUEGO_MESA",
+      "precio": "129900",
+      "stock": 4,
+      "jugadores_min": 1,
+      "jugadores_max": 5,
+      "duracion_minutos": 120,
+      "edad_minima": 12,
+      "imagen_url": "https://upload.wikimedia.org/wikipedia/en/f/f0/Terraforming_Mars_board_game_box_cover.jpg",
+      "activo": true,
+      "fecha_alta": "2026-09-04 09:00:00-03:00",
+      "categoria": 1,
+      "editorial": 2,
+      "mecanicas": [
+        3,
+        4
+      ],
+      "disenadores": [
+        3
+      ],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 4,
+    "fields": {
+      "nombre": "Wingspan",
+      "descripcion": "Atraé aves a tu reserva natural y combiná sus poderes en un motor de cartas.",
+      "tipo": "JUEGO_MESA",
+      "precio": "119900",
+      "stock": 5,
+      "jugadores_min": 1,
+      "jugadores_max": 5,
+      "duracion_minutos": 70,
+      "edad_minima": 10,
+      "imagen_url": "https://upload.wikimedia.org/wikipedia/en/c/c3/3d-wingspan-768x752.png",
+      "activo": true,
+      "fecha_alta": "2026-09-05 09:00:00-03:00",
+      "categoria": 1,
+      "editorial": 2,
+      "mecanicas": [
+        3,
+        8
+      ],
+      "disenadores": [
+        4
+      ],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 5,
+    "fields": {
+      "nombre": "Azul",
+      "descripcion": "Decorá las paredes del palacio real con azulejos portugueses sin desperdiciar piezas.",
+      "tipo": "JUEGO_MESA",
+      "precio": "74900",
+      "stock": 6,
+      "jugadores_min": 2,
+      "jugadores_max": 4,
+      "duracion_minutos": 45,
+      "edad_minima": 8,
+      "imagen_url": "https://upload.wikimedia.org/wikipedia/en/2/23/Picture_of_Azul_game_box.jpg",
+      "activo": true,
+      "fecha_alta": "2026-09-06 09:00:00-03:00",
+      "categoria": 2,
+      "editorial": 5,
+      "mecanicas": [
+        4,
+        8
+      ],
+      "disenadores": [
+        5
+      ],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 6,
+    "fields": {
+      "nombre": "Dixit",
+      "descripcion": "Cartas ilustradas y pistas poéticas: ni muy obvio ni muy rebuscado.",
+      "tipo": "JUEGO_MESA",
+      "precio": "64900",
+      "stock": 7,
+      "jugadores_min": 3,
+      "jugadores_max": 8,
+      "duracion_minutos": 30,
+      "edad_minima": 8,
+      "imagen_url": "https://upload.wikimedia.org/wikipedia/en/7/7b/Dixitgame.jpg",
+      "activo": true,
+      "fecha_alta": "2026-09-07 09:00:00-03:00",
+      "categoria": 3,
+      "editorial": 5,
+      "mecanicas": [
+        7,
+        9
+      ],
+      "disenadores": [
+        6
+      ],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 7,
+    "fields": {
+      "nombre": "Pandemic",
+      "descripcion": "Un equipo de especialistas recorre el mundo para frenar cuatro enfermedades.",
+      "tipo": "JUEGO_MESA",
+      "precio": "79900",
+      "stock": 5,
+      "jugadores_min": 2,
+      "jugadores_max": 4,
+      "duracion_minutos": 45,
+      "edad_minima": 8,
+      "imagen_url": "https://upload.wikimedia.org/wikipedia/en/3/36/Pandemic_game.jpg",
+      "activo": true,
+      "fecha_alta": "2026-09-08 09:00:00-03:00",
+      "categoria": 4,
+      "editorial": 5,
+      "mecanicas": [
+        6,
+        8
+      ],
+      "disenadores": [
+        7
+      ],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 8,
+    "fields": {
+      "nombre": "¡Aventureros al Tren!",
+      "descripcion": "Reclamá rutas de tren por todo el mapa y conectá ciudades lejanas.",
+      "tipo": "JUEGO_MESA",
+      "precio": "94900",
+      "stock": 3,
+      "jugadores_min": 2,
+      "jugadores_max": 5,
+      "duracion_minutos": 60,
+      "edad_minima": 8,
+      "imagen_url": "https://upload.wikimedia.org/wikipedia/en/9/92/Ticket_to_Ride_Board_Game_Box_EN.jpg",
+      "activo": true,
+      "fecha_alta": "2026-09-09 09:00:00-03:00",
+      "categoria": 2,
+      "editorial": 5,
+      "mecanicas": [
+        10,
+        8
+      ],
+      "disenadores": [
+        8
+      ],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 9,
+    "fields": {
+      "nombre": "7 Wonders",
+      "descripcion": "Guiá una civilización antigua durante tres eras y levantá una de las siete maravillas.",
+      "tipo": "JUEGO_MESA",
+      "precio": "84900",
+      "stock": 4,
+      "jugadores_min": 3,
+      "jugadores_max": 7,
+      "duracion_minutos": 30,
+      "edad_minima": 10,
+      "imagen_url": "https://upload.wikimedia.org/wikipedia/en/0/0b/7_Wonders_-_New_Edition_boxart.png",
+      "activo": true,
+      "fecha_alta": "2026-09-10 09:00:00-03:00",
+      "categoria": 1,
+      "editorial": 5,
+      "mecanicas": [
+        4,
+        8
+      ],
+      "disenadores": [
+        9
+      ],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 10,
+    "fields": {
+      "nombre": "Código Secreto",
+      "descripcion": "Dos equipos de espías y una sola palabra de pista para encontrar a sus agentes.",
+      "tipo": "JUEGO_MESA",
+      "precio": "39900",
+      "stock": 12,
+      "jugadores_min": 2,
+      "jugadores_max": 8,
+      "duracion_minutos": 15,
+      "edad_minima": 14,
+      "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Codenames_board_game.jpg/500px-Codenames_board_game.jpg",
+      "activo": true,
+      "fecha_alta": "2026-09-11 09:00:00-03:00",
+      "categoria": 3,
+      "editorial": 1,
+      "mecanicas": [
+        9
+      ],
+      "disenadores": [
+        10
+      ],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 11,
+    "fields": {
+      "nombre": "Burako",
+      "descripcion": "El clásico de fichas de las sobremesas argentinas: escaleras, piernas y canastas.",
+      "tipo": "JUEGO_MESA",
+      "precio": "34900",
+      "stock": 15,
+      "jugadores_min": 2,
+      "jugadores_max": 4,
+      "duracion_minutos": 60,
+      "edad_minima": 8,
+      "imagen_url": "",
+      "activo": true,
+      "fecha_alta": "2026-09-12 09:00:00-03:00",
+      "categoria": 2,
+      "editorial": 6,
+      "mecanicas": [
+        8
+      ],
+      "disenadores": [],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 12,
+    "fields": {
+      "nombre": "Dungeons & Dragons 5e: Manual del Jugador",
+      "descripcion": "Todo lo necesario para crear personajes y vivir aventuras en la quinta edición de D&D.",
+      "tipo": "JUEGO_ROL",
+      "precio": "109900",
+      "stock": 6,
+      "jugadores_min": 2,
+      "jugadores_max": 7,
+      "duracion_minutos": 240,
+      "edad_minima": 12,
+      "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Dungeons_and_Dragons_game.jpg/500px-Dungeons_and_Dragons_game.jpg",
+      "activo": true,
+      "fecha_alta": "2026-09-13 09:00:00-03:00",
+      "categoria": 5,
+      "editorial": 4,
+      "mecanicas": [
+        7,
+        5
+      ],
+      "disenadores": [
+        11
+      ],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 13,
+    "fields": {
+      "nombre": "La Llamada de Cthulhu 7ª edición",
+      "descripcion": "Investigadores comunes frente a horrores cósmicos inspirados en H. P. Lovecraft.",
+      "tipo": "JUEGO_ROL",
+      "precio": "99900",
+      "stock": 3,
+      "jugadores_min": 2,
+      "jugadores_max": 6,
+      "duracion_minutos": 240,
+      "edad_minima": 16,
+      "imagen_url": "https://upload.wikimedia.org/wikipedia/en/3/33/Call_of_Cthulhu_RPG_1st_ed_1981.jpg",
+      "activo": true,
+      "fecha_alta": "2026-09-14 09:00:00-03:00",
+      "categoria": 5,
+      "editorial": 5,
+      "mecanicas": [
+        7,
+        5
+      ],
+      "disenadores": [
+        12
+      ],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 14,
+    "fields": {
+      "nombre": "Pathfinder 2e: Libro Básico",
+      "descripcion": "Reglas completas de Pathfinder: ascendencias, clases y magia.",
+      "tipo": "JUEGO_ROL",
+      "precio": "119900",
+      "stock": 2,
+      "jugadores_min": 2,
+      "jugadores_max": 6,
+      "duracion_minutos": 240,
+      "edad_minima": 14,
+      "imagen_url": "https://upload.wikimedia.org/wikipedia/en/0/0e/Pathfinder_RPG_Core_Rulebook_cover.jpeg",
+      "activo": true,
+      "fecha_alta": "2026-09-15 09:00:00-03:00",
+      "categoria": 5,
+      "editorial": 1,
+      "mecanicas": [
+        7,
+        5
+      ],
+      "disenadores": [
+        13
+      ],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 15,
+    "fields": {
+      "nombre": "Catan: Navegantes",
+      "descripcion": "Barcos, islas y mares desconocidos para ampliar Catan.",
+      "tipo": "EXPANSION",
+      "precio": "64900",
+      "stock": 4,
+      "jugadores_min": 3,
+      "jugadores_max": 4,
+      "duracion_minutos": 120,
+      "edad_minima": 10,
+      "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Seafarers_of_Catan_-_Midgame.jpg/500px-Seafarers_of_Catan_-_Midgame.jpg",
+      "activo": true,
+      "fecha_alta": "2026-09-16 09:00:00-03:00",
+      "categoria": 1,
+      "editorial": 1,
+      "mecanicas": [
+        2,
+        5
+      ],
+      "disenadores": [
+        1
+      ],
+      "juego_base": 1
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 16,
+    "fields": {
+      "nombre": "Carcassonne: Posadas y Catedrales",
+      "descripcion": "Agrega posadas, catedrales y un sexto jugador a Carcassonne.",
+      "tipo": "EXPANSION",
+      "precio": "39900",
+      "stock": 5,
+      "jugadores_min": 2,
+      "jugadores_max": 6,
+      "duracion_minutos": 60,
+      "edad_minima": 7,
+      "imagen_url": "",
+      "activo": true,
+      "fecha_alta": "2026-09-17 09:00:00-03:00",
+      "categoria": 2,
+      "editorial": 1,
+      "mecanicas": [
+        1
+      ],
+      "disenadores": [
+        2
+      ],
+      "juego_base": 2
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 17,
+    "fields": {
+      "nombre": "Wingspan: Expansión Europea",
+      "descripcion": "81 aves de Europa con nuevos poderes para la reserva de Wingspan.",
+      "tipo": "EXPANSION",
+      "precio": "49900",
+      "stock": 0,
+      "jugadores_min": 1,
+      "jugadores_max": 5,
+      "duracion_minutos": 70,
+      "edad_minima": 10,
+      "imagen_url": "",
+      "activo": true,
+      "fecha_alta": "2026-09-18 09:00:00-03:00",
+      "categoria": 1,
+      "editorial": 2,
+      "mecanicas": [
+        3
+      ],
+      "disenadores": [
+        4
+      ],
+      "juego_base": 4
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 18,
+    "fields": {
+      "nombre": "Set de dados poliédricos",
+      "descripcion": "Siete dados (d4, d6, d8, d10, d%, d12 y d20) para cualquier rol.",
+      "tipo": "ACCESORIO",
+      "precio": "9900",
+      "stock": 30,
+      "jugadores_min": null,
+      "jugadores_max": null,
+      "duracion_minutos": null,
+      "edad_minima": null,
+      "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Dice_%28typical_role_playing_game_dice%29.jpg/500px-Dice_%28typical_role_playing_game_dice%29.jpg",
+      "activo": true,
+      "fecha_alta": "2026-09-19 09:00:00-03:00",
+      "categoria": 6,
+      "editorial": 3,
+      "mecanicas": [],
+      "disenadores": [],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 19,
+    "fields": {
+      "nombre": "Fundas para cartas estándar x100",
+      "descripcion": "Fundas transparentes de 63,5 x 88 mm para proteger tus cartas.",
+      "tipo": "ACCESORIO",
+      "precio": "7900",
+      "stock": 40,
+      "jugadores_min": null,
+      "jugadores_max": null,
+      "duracion_minutos": null,
+      "edad_minima": null,
+      "imagen_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Sleeved_playing_card.jpg/500px-Sleeved_playing_card.jpg",
+      "activo": true,
+      "fecha_alta": "2026-09-20 09:00:00-03:00",
+      "categoria": 6,
+      "editorial": null,
+      "mecanicas": [],
+      "disenadores": [],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 20,
+    "fields": {
+      "nombre": "Pantalla del Dungeon Master",
+      "descripcion": "Pantalla con las tablas más consultadas para dirigir partidas.",
+      "tipo": "ACCESORIO",
+      "precio": "44900",
+      "stock": 5,
+      "jugadores_min": null,
+      "jugadores_max": null,
+      "duracion_minutos": null,
+      "edad_minima": null,
+      "imagen_url": "https://upload.wikimedia.org/wikipedia/en/d/d3/AD%26D_Dungeon_Masters_Screen.jpg",
+      "activo": true,
+      "fecha_alta": "2026-09-21 09:00:00-03:00",
+      "categoria": 6,
+      "editorial": 4,
+      "mecanicas": [],
+      "disenadores": [],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.producto",
+    "pk": 21,
+    "fields": {
+      "nombre": "Tapete de neopreno 60 x 60",
+      "descripcion": "Tapete antideslizante. Discontinuado (borrado lógico).",
+      "tipo": "ACCESORIO",
+      "precio": "29900",
+      "stock": 0,
+      "jugadores_min": null,
+      "jugadores_max": null,
+      "duracion_minutos": null,
+      "edad_minima": null,
+      "imagen_url": "",
+      "activo": false,
+      "fecha_alta": "2026-09-22 09:00:00-03:00",
+      "categoria": 6,
+      "editorial": null,
+      "mecanicas": [],
+      "disenadores": [],
+      "juego_base": null
+    }
+  },
+  {
+    "model": "catalogo.resena",
+    "pk": 1,
+    "fields": {
+      "producto": 1,
+      "usuario": 2,
+      "puntaje": 5,
+      "comentario": "El juego que me metió en este mundo. El comercio en la mesa es lo mejor.",
+      "fecha": "2026-09-22 19:10:00-03:00"
+    }
+  },
+  {
+    "model": "catalogo.resena",
+    "pk": 2,
+    "fields": {
+      "producto": 1,
+      "usuario": 3,
+      "puntaje": 4,
+      "comentario": "Muy bueno, aunque los dados a veces te dejan una partida sin trigo.",
+      "fecha": "2026-09-23 21:00:00-03:00"
+    }
+  },
+  {
+    "model": "catalogo.resena",
+    "pk": 3,
+    "fields": {
+      "producto": 1,
+      "usuario": 5,
+      "puntaje": 4,
+      "comentario": "Ideal para empezar a un grupo nuevo.",
+      "fecha": "2026-09-25 18:30:00-03:00"
+    }
+  },
+  {
+    "model": "catalogo.resena",
+    "pk": 4,
+    "fields": {
+      "producto": 4,
+      "usuario": 4,
+      "puntaje": 5,
+      "comentario": "Precioso. El arte y el motor de cartas se complementan perfecto.",
+      "fecha": "2026-10-02 20:15:00-03:00"
+    }
+  },
+  {
+    "model": "catalogo.resena",
+    "pk": 5,
+    "fields": {
+      "producto": 4,
+      "usuario": 2,
+      "puntaje": 5,
+      "comentario": "Se juega rápido y siempre querés una partida más.",
+      "fecha": "2026-10-04 17:40:00-03:00"
+    }
+  },
+  {
+    "model": "catalogo.resena",
+    "pk": 6,
+    "fields": {
+      "producto": 3,
+      "usuario": 3,
+      "puntaje": 5,
+      "comentario": "Larga pero cada generación se siente distinta. Mi favorito.",
+      "fecha": "2026-10-18 22:05:00-03:00"
+    }
+  },
+  {
+    "model": "catalogo.resena",
+    "pk": 7,
+    "fields": {
+      "producto": 6,
+      "usuario": 5,
+      "puntaje": 5,
+      "comentario": "El rey de las noches de juegos con amigos que no juegan.",
+      "fecha": "2026-10-07 23:30:00-03:00"
+    }
+  },
+  {
+    "model": "catalogo.resena",
+    "pk": 8,
+    "fields": {
+      "producto": 6,
+      "usuario": 4,
+      "puntaje": 4,
+      "comentario": "Hermosas ilustraciones, conviene jugarlo con 5 o más.",
+      "fecha": "2026-10-08 00:10:00-03:00"
+    }
+  },
+  {
+    "model": "catalogo.resena",
+    "pk": 9,
+    "fields": {
+      "producto": 7,
+      "usuario": 4,
+      "puntaje": 4,
+      "comentario": "Perdimos tres veces seguidas y lo seguimos queriendo.",
+      "fecha": "2026-10-11 19:00:00-03:00"
+    }
+  },
+  {
+    "model": "catalogo.resena",
+    "pk": 10,
+    "fields": {
+      "producto": 12,
+      "usuario": 5,
+      "puntaje": 5,
+      "comentario": "Clarísimo para armar personajes. Imprescindible si dirigís.",
+      "fecha": "2026-10-09 12:00:00-03:00"
+    }
+  },
+  {
+    "model": "catalogo.resena",
+    "pk": 11,
+    "fields": {
+      "producto": 12,
+      "usuario": 3,
+      "puntaje": 4,
+      "comentario": "Muy completo; algunas reglas de magia hay que leerlas dos veces.",
+      "fecha": "2026-10-12 16:20:00-03:00"
+    }
+  },
+  {
+    "model": "catalogo.resena",
+    "pk": 12,
+    "fields": {
+      "producto": 10,
+      "usuario": 2,
+      "puntaje": 3,
+      "comentario": "Divertido, pero depende mucho de quién da las pistas.",
+      "fecha": "2026-10-14 21:45:00-03:00"
+    }
+  },
+  {
+    "model": "catalogo.resena",
+    "pk": 13,
+    "fields": {
+      "producto": 5,
+      "usuario": 3,
+      "puntaje": 4,
+      "comentario": "Simple de explicar y con decisiones difíciles. Lindo de ver en la mesa.",
+      "fecha": "2026-10-15 18:00:00-03:00"
+    }
+  }
+]
