@@ -119,6 +119,9 @@ SPECTACULAR_SETTINGS = {
         "EstadoPedidoEnum": "ventas.models.Pedido.ESTADOS",
         "EstadoEventoEnum": "eventos.models.Evento.ESTADOS",
     },
+    # Versiones fijas del CDN: con "latest" llegó Redoc 3, que no carga en esta plantilla
+    "SWAGGER_UI_DIST": "https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.34.0",
+    "REDOC_DIST": "https://cdn.jsdelivr.net/npm/redoc@2.5.4",
 }
 
 SIMPLE_JWT = {
