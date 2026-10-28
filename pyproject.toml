@@ -1,6 +1,6 @@
 [project]
 name = "arcana-api"
-version = "0.1.0"
+version = "1.0.0"
 description = "API REST de Arcana, tienda de juegos de mesa y rol con eventos, tabla de ganadores y leyendas"
 readme = "README.md"
 authors = [
