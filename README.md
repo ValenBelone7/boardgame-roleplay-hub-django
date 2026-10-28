@@ -8,8 +8,23 @@ Este repositorio contiene la **API REST** de Arcana, construida con Django y Dja
 
 > Evaluación Final Integradora 2026 — Ingeniería de Software (ITEC).
 
+## API desplegada
+
+La API está publicada en **Render** desde la rama `deploy` de este repositorio:
+
+| | URL |
+|---|---|
+| Inicio | <https://arcana-api-efi.onrender.com/> |
+| Swagger | <https://arcana-api-efi.onrender.com/api/schema/swagger/> |
+| Catálogo | <https://arcana-api-efi.onrender.com/api/productos/> |
+
+- `deploy` nace de `main` (`v1.0.0`) y solo suma la configuración de producción: `gunicorn`, `whitenoise`, `build.sh` y `render.yaml`. Render instala con pip desde `requirements.txt`, que se genera con `uv export` (no se edita a mano).
+- La base es SQLite y se vuelve a crear en cada deploy con los [datos de ejemplo](#datos-de-ejemplo), así que los [usuarios de demo](#usuarios-de-demo) funcionan también acá.
+- Un monitor de UptimeRobot consulta `/api/categorias/` cada 5 minutos para que el plan gratuito de Render no la duerma.
+
 ## Índice
 
+- [API desplegada](#api-desplegada)
 - [Objetivo](#objetivo)
 - [Capturas](#capturas)
 - [Stack](#stack)
