@@ -33,6 +33,13 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
+CSRF_TRUSTED_ORIGINS = []
+
+# Render define esta variable con el dominio del servicio (arcana-api-efi.onrender.com)
+RENDER_HOST = os.getenv("RENDER_EXTERNAL_HOSTNAME")
+if RENDER_HOST:
+    ALLOWED_HOSTS.append(RENDER_HOST)
+    CSRF_TRUSTED_ORIGINS.append(f"https://{RENDER_HOST}")
 
 
 # Application definition
@@ -57,6 +64,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # sirve los estáticos en producción
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -186,6 +194,16 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 STATICFILES_DIRS = [BASE_DIR / "static"]
+
+# collectstatic junta acá los estáticos (admin, Swagger, bienvenida) para que los sirva whitenoise
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+STORAGES = {
+    "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 
 # Email
